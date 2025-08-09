@@ -1,3 +1,5 @@
 def call(String Projectname , String ImageTag , String DockerHubUser){
-  sh "docker build -t ${dockerHubUser}/${Projectname}:${ImageTag} ."
+  echo "building the image"
+  sh "docker build -t ${dockerHubUser}/${Projectname}:${ImageTag} . "
+  echo "image build completed"
 }
